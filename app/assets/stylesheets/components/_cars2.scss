@@ -1,0 +1,27 @@
+.cars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 100px;
+  padding: 20px;
+  list-style: none;
+}
+
+.car {
+  border: 1px solid #817979;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.car:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.car_image {
+  width: 150px;
+  height: 120px;
+  border-radius: 15%;
+}
