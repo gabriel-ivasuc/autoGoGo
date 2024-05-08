@@ -2,8 +2,8 @@ Car.destroy_all
 User.destroy_all
 
 
-user = User.create(email: "test@test.com", password: 123456)
-user2 = User.create(email:"lewagon@gmail.com", password: 123456)
+user = User.create(email: "test@test.com", password: '123456')
+user2 = User.create(email:"lewagon@gmail.com", password: '123456')
 
 car_1 = Car.new(name: 'BMW X3', car_type: 'SUV', transmission: 'Petrol', price: 100, car_description: 'Red, Automatic, Bluetooth Enabled, SatNav Enabled', user: user)
 car_1.save!
