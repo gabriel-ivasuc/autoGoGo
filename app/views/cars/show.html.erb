@@ -1,2 +1,18 @@
-<%= @car.name %>
+<%= stylesheet_link_tag 'car_style' %>
+
+
+<h1 class="special-heading"><%= @car.name %></h1>
+
+<p><strong class="car-type">Car Type: <%= @car.car_type %></p>
+<p>Transmission: <%= @car.transmission %></p>
+<p>Price: <%= @car.price %></p>
+
+<p>Car Description:</p>
+<ul>
+  <% @car.car_description.split(',').each do |description| %>
+    <li><%= description.strip %></li>
+  <% end %>
+</ul>
+
+
 <%= link_to "Go Back", cars_path %>
