@@ -1,3 +1,12 @@
 <h1>List your car</h1>
 <%# here goes your simple form %>
+<%= simple_form_for(@car) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :car_type %>
+  <%= f.input :transmission %>
+  <%= f.input :price %>
+  <%= f.input :car_description %>
+  <%= f.submit %>
+<% end %>
+
 
