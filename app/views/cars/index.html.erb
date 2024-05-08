@@ -3,6 +3,7 @@
     <% @cars.each do |car| %>
       <%= link_to car_path(car) do %>
         <div class="car">
+
           <li><%= car.name %></li>
           <li><%= car.car_type %></li>
           <li><%= car.price %></li>
