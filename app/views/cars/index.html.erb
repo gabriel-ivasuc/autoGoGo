@@ -3,6 +3,11 @@
     <% @cars.each do |car| %>
       <%= link_to car_path(car) do %>
         <div class="car">
+          <% if car.photo.attached? %>
+            <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else  %>
+            <%= image_tag 'city-life_.jpeg', class: "car_image" %>
+            <% end %>
           <li><%= car.name %></li>
           <li><%= car.car_type %></li>
           <li><%= car.price %></li>
