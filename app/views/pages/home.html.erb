@@ -4,21 +4,26 @@
   <body>
     <div class="banner">
        <h1>AutoGoGo</h1>
-       <h5>Drive Your Dreams: Rent With Us Today!<h5/>
+       <h5>Drive Your Dreams: Rent With Us Today!</h5>
     </div>
 
 
     <div class="search-bar">
       <div>
       <input type="text" placeholder="Explore cars...">
-      <button>Search</button>
+        <button>Search</button>
       </div>
-      <%= link_to "See all cars", cars_path %>
     </div>
-
-
+      <div class="container">
+          <div class="about">
+            <div class="description">
+              <p>Join our vibrant community of travelers and car owners alike! With our unique car rental platform, it's easier than ever to share your wheels or find the perfect ride for your next journey. Owners, showcase your vehicle and earn extra income by listing it on our user-friendly website. Travelers, explore a diverse range of vehicles suited to your needs, preferences, and budget.</p>
+            </div>
+            <%= link_to "See all cars", cars_path, class: "button-style" %>
+          </div>
+        </div>
     <footer>
       <p>&copy; 2024 AutoGoGo. All rights reserved.</p>
     </footer>
-  </body>
+    /body>
 </html>

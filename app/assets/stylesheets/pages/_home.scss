@@ -50,15 +50,17 @@ body {
 
 .search-bar button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color:lightgrey;
   color: #fff;
-  border: none;
-  border-radius: 5px;
+  border: darkgrey;
+  border-radius: 12px;
   cursor: pointer;
+  width: 150px;
+  height: 47px;
 }
 
 .search-bar button:hover {
-  background-color: #0056b3;
+  background-color: darkgrey;
 }
 
 footer {
@@ -69,4 +71,37 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.button-style {
+  margin-top: 20px;
+  background-color: lightgrey;
+  color:#fff;
+  border-radius: 12px;
+  border: darkgrey;
+  text-decoration: none;
+  width: 150px;
+  height: 45px;
+  display: inline-block;
+  text-align:center;
+  line-height: 45px;
+  bottom: 20px;
+
+}
+
+.button-style:hover {
+  background-color: darkgrey;
+}
+
+
+
+.container {
+  position: absolute;
+  right:2500;
+  bottom:0;
+}
+
+.description {
+  width: 350px;
+  font-size: 11px;
 }
