@@ -1,1 +1,72 @@
-// Specific CSS for your home-page
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ccc;
+
+}
+
+.banner {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+
+.banner h1 {
+  margin: 0;
+  font-family:Arial, Helvetica, sans-serif
+}
+
+.banner p {
+  margin-top: 5px;
+  font-family:Arial, Helvetica, sans-serif
+}
+
+.search-bar {
+  background-image: url(city_life3.jpg);
+  height: 800px;
+  background-repeat: no-repeat;
+  background-position-x: center !important;
+  background-position-y: center !important;
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
