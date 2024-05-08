@@ -1,18 +1,22 @@
 <%= stylesheet_link_tag 'car_style' %>
 
+<div class="car-details">
+  <h1><%= @car.name %></h1>
 
-<h1 class="special-heading"><%= @car.name %></h1>
+  <div class="car-info">
+    <p><strong>Car Type:</strong> <%= @car.car_type %></p>
+    <p><strong>Trasmission:</strong> <%= @car.transmission %></p>
+    <p><strong>Price:</strong> <%= @car.price %></p>
+  <div>
 
-<p><strong class="car-type">Car Type: <%= @car.car_type %></p>
-<p>Transmission: <%= @car.transmission %></p>
-<p>Price: <%= @car.price %></p>
+  <div class="car-description">
+    <h2>Description:</h2>
+    <ul>
+      <% @car.car_description.split(',').each do |description| %>
+        <li><%= description.strip %></li>
+      <% end %>
+    </ul>
+  </div>
 
-<p>Car Description:</p>
-<ul>
-  <% @car.car_description.split(',').each do |description| %>
-    <li><%= description.strip %></li>
-  <% end %>
-</ul>
-
-
-<%= link_to "Go Back", cars_path %>
+  <%= link_to "Go Back", cars_path, class: "btn btn-primary" %>
+</div>
