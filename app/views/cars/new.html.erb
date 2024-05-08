@@ -1,12 +1,40 @@
-<h1>List your car</h1>
+<%# <h1>List your car</h1>
 <%# here goes your simple form %>
-<%= simple_form_for(@car) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :car_type %>
-  <%= f.input :transmission %>
-  <%= f.input :price %>
-  <%= f.input :car_description %>
-  <%= f.submit %>
-<% end %>
+<%# <%= simple_form_for(@car) do |f| %>
+  <%# <%= f.input :name %>
+  <%# <%= f.input :car_type %>
+  <%# <%= f.input :transmission %>
+  <%# <%= f.input :price %>
+  <%# <%= f.input :car_description %>
+  <%# <%= f.submit %>
+<%# <% end %>
 
 
+
+
+  <div class="container mt-5">
+    <h1 class="mb-4">List Your Car</h1>
+    <%= simple_form_for(@car, html: { class: 'form' }) do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :car_type %>
+        <%= f.select :car_type, options_for_select(['Saloon', 'SUV', 'Hatchback']), { include_blank: true }, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :transmission %>
+        <%= f.select :transmission, options_for_select(['Manual', 'Automatic']), { include_blank: true }, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :price %>
+        <%= f.number_field :price, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :car_description %>
+        <%= f.text_area :car_description, class: 'form-control', rows: 5 %>
+      </div>
+      <%= f.submit 'Submit', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
