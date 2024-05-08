@@ -35,6 +35,7 @@
         <%= f.label :car_description %>
         <%= f.text_area :car_description, class: 'form-control', rows: 5 %>
       </div>
+      <%= f.input :photo, as: :file %>
       <%= f.submit 'Submit', class: 'btn btn-primary' %>
     <% end %>
   </div>
