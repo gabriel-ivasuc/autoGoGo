@@ -25,3 +25,17 @@
   height: 120px;
   border-radius: 15%;
 }
+
+// .car_image_show and .show_link is for ShowPage DESCRIPTION button
+.car_image_show {
+  width: 450px;
+  height: 360px;
+  border-radius: 5%;
+}
+
+.show_link {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
