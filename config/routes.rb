@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :cars
-  resources :cars, only: [:show]
+  resources :cars, only: [:show, :destroy]
 
   get "up" => "rails/health#show", as: :rails_health_check
 

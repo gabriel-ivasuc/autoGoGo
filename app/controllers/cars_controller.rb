@@ -1,6 +1,7 @@
 class CarsController < ApplicationController
   def index
     @cars = Car.all
+    @car = Car.new
   end
 
   def show
@@ -20,6 +21,14 @@ class CarsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    @car = Car.find(params[:id])
+    @car.destroy
+    redirect_to cars_path, status: :see_other
+  end
+
+
 
     private
 
