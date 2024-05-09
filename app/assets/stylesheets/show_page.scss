@@ -7,11 +7,12 @@
 }
 
 .car-details h1 {
-  font-size: 24px;
+  font-size: 55px;
   color: #333;
   margin: 0;
   padding: 0;
   font-weight: bold;
+  text-align: center;
 }
 
 .car-info {
@@ -20,19 +21,23 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .car-info p {
-  margin: 0;
-  padding: 10px 0;
+  margin: 4;
+  padding: 4px 0;
   font-size: 16px;
   color: #333;
 }
 
 .car-info strong {
-  color: #ff0000;
+  font-size: 18px;
+  color: #000000;
   font-weight: bold;
 }
+
 
 .car-description {
   margin-top: 20px;
@@ -41,7 +46,7 @@
 .car-description h2 {
   font-size: 20px;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .car-description ul {
@@ -57,13 +62,13 @@
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #97acc2;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: rgb(77, 153, 153);
 }
