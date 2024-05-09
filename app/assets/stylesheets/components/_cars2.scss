@@ -4,15 +4,18 @@
   gap: 100px;
   padding: 20px;
   list-style: none;
+  background-color: rgb(187, 182, 182);
 }
 
 .car {
-  border: 1px solid #817979;
+  border: 1px solid #ded8d8;
   border-radius: 10px;
   padding: 20px;
-  background-color: #fff;
+  background-color: rgb(230, 227, 227);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  text-decoration: none;
+  color: black;
 }
 
 .car:hover {
@@ -20,10 +23,10 @@
 }
 
 
-.car_image {
-  width: 150px;
-  height: 120px;
-  border-radius: 15%;
+.car-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 // .car_image_show and .show_link is for ShowPage DESCRIPTION button
