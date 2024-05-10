@@ -1,3 +1,4 @@
+require "open-uri"
 Car.destroy_all
 User.destroy_all
 
