@@ -1,0 +1,55 @@
+<div class="container mt-5">
+  <h1 class="mb-4">Welcome to Your Dashboard, <%= @user.name %></h1>
+
+  <% if current_user %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Your Rentals</h2>
+          </div>
+          <ul class="list-group list-group-flush">
+            <% @rentals.each do |rental| %>
+              <li class="list-group-item">
+                Rental ID: <%= rental.id %><br>
+                Car: <%= rental.car.name %><br>
+                Start Date: <%= rental.start_date %><br>
+                End Date: <%= rental.end_date %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Your Cars</h2>
+          </div>
+          <ul class="list-group list-group-flush">
+            <% @cars.each do |car| %>
+              <li class="list-group-item">
+                Car ID: <%= car.id %><br>
+                Name: <%= car.name %><br>
+                Type: <%= car.car_type %><br>
+                Transmission: <%= car.transmission %><br>
+                Price: £<%= car.price %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <% redirect_to root_path %>
+  <% end %>
+</div>
+
+<style>
+  .container {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+</style>
