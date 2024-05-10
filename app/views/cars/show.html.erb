@@ -14,6 +14,7 @@
         <% end %>
       </div>
 
+
         <div class="mx-5">
           <p><strong>Car Type:</strong> <%= @car.car_type %></p>
           <p><strong>Trasmission:</strong> <%= @car.transmission %></p>
@@ -37,7 +38,25 @@
         <div class="form-group">
           <%= f.label :start_date, "Start Date" %>
           <%= f.input :start_date, label: false, input_html: { class: 'form-control' } %>
+
+
+        <div class="mx-5">
+          <p><strong>Car Type:</strong> <%= @car.car_type %></p>
+          <p><strong>Trasmission:</strong> <%= @car.transmission %></p>
+          <p><strong>Price:</strong> £<%= @car.price %></p>
+
+          <div data-controller="description-toggle" class="car-description">
+          <button data-action="click->description-toggle#show" class="description-toggle">Description:</button>
+          <ul data-description-toggle-target="details" class="additionl-details d-none">
+            <% @car.car_description.split(',').each do |description| %>
+              <li><%= description.strip %></li>
+            <% end %>
+          </ul>
+
         </div>
+      </div>
+    </div>
+
 
         <div class="form-group">
           <%= f.label :end_date, "End Date" %>
@@ -60,3 +79,38 @@
       <%= link_to "Make an Enquiry", "#", class: "btn btn-primary" %>
       <%= link_to "Go Back", cars_path, class: "btn btn-primary mx-4" %>
     </div>
+
+
+    <div class="rental-form-container style=display: none;">
+      <h2>Rental Request Form</h1>
+
+      <%= simple_form_for([@car, @rental], html: { class: 'rental-form' }) do |f| %>
+
+
+        <div class="form-group">
+          <%= f.label :start_date, "Start Date" %>
+          <%= f.input :start_date, label: false, input_html: { class: 'form-control' } %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :end_date, "End Date" %>
+          <%= f.input :end_date, label: false, input_html: { class: 'form-control' } %>
+        </div>
+
+        <div class="form-group">
+          <%= f.button :submit, "Rent Now", class: "btn btn-light" %>
+        </div>
+      <% end %>
+    </div>
+
+
+
+    </div>
+
+</div>
+
+    <div class="show-button">
+      <%= link_to "View your bookings", dashboard_path, class: "btn btn-primary" %>
+      <%= link_to "Go Back", cars_path, class: "btn btn-primary mx-4" %>
+    </div>
+
