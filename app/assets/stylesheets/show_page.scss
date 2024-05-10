@@ -1,3 +1,5 @@
+show_pages.scss
+
 .car-details {
   background-color: #f8f9fa;
   border-radius: 10px;
@@ -7,7 +9,7 @@
 }
 
 .car-details h1 {
-  font-size: 55px;
+  font-size: 60px;
   color: #333;
   margin: 0;
   padding: 0;
@@ -15,7 +17,14 @@
   text-align: center;
 }
 
+.rental-form-container h2{
+  font-size: 40x;
+  color: #333;
+  font: serif;
+}
+
 .car-info {
+  font-size: 22px;
   background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -28,12 +37,12 @@
 .car-info p {
   margin: 4;
   padding: 4px 0;
-  font-size: 16px;
+  font-size: 20px;
   color: #333;
 }
 
 .car-info strong {
-  font-size: 18px;
+  font-size: 20px;
   color: #000000;
   font-weight: bold;
 }
@@ -44,7 +53,7 @@
 }
 
 .car-description h2 {
-  font-size: 20px;
+  font-size: 18px;
   color: #333;
   margin-bottom: 50px;
 }
@@ -59,16 +68,23 @@
   color: #555;
 }
 
+.show-button {
+  text-align: center;
+}
+
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: lightgrey;
+  padding: 12px 24px;
+  background-color: rgb(67, 80, 176);
   color: #fff;
   text-decoration: none;
   border-radius: 20px;
   transition: background-color 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .btn:hover {
-  background-color: darkgrey;
+  background-color: #a1a5a9;
 }
