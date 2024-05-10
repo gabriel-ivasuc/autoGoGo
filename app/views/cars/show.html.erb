@@ -17,7 +17,7 @@
         <div class="mx-5">
           <p><strong>Car Type:</strong> <%= @car.car_type %></p>
           <p><strong>Trasmission:</strong> <%= @car.transmission %></p>
-          <p><strong>Price:</strong> <%= @car.price %></p>
+          <p><strong>Price:</strong> £<%= @car.price %></p>
 
           <div data-controller="description-toggle" class="car-description">
           <button data-action="click->description-toggle#show" class="description-toggle">Description:</button>
@@ -35,6 +35,8 @@
       <h2>Rental Request Form</h1>
 
       <%= simple_form_for([@car, @rental], html: { class: 'rental-form' }) do |f| %>
+
+
         <div class="form-group">
           <%= f.label :start_date, "Start Date" %>
           <%= f.input :start_date, label: false, input_html: { class: 'form-control' } %>
@@ -46,7 +48,7 @@
         </div>
 
         <div class="form-group">
-          <%= f.button :submit, "Submit", class: "btn btn-light" %>
+          <%= f.button :submit, "Rent Now", class: "btn btn-light" %>
         </div>
       <% end %>
     </div>
@@ -58,6 +60,6 @@
 </div>
 
     <div class="show-button">
-      <%= link_to "Make an Enquiry", "#", id: "toggle-form-button", class: "btn btn-primary" %>
+      <%= link_to "View your bookings", dashboard_path, class: "btn btn-primary" %>
       <%= link_to "Go Back", cars_path, class: "btn btn-primary mx-4" %>
     </div>
