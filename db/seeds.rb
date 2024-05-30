@@ -24,6 +24,10 @@ car_3 = Car.new(name: 'Toyota Corolla', car_type: 'Saloon', transmission: "Autom
 car_3.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 car_3.save!
 
+# file = URI.open("https://www.topgear.com/sites/default/files/2021/11/1063340_mw7_4227.jpg")
+# car_4 = Car.new(name: 'Fiat 500', car_type: 'Hatchback', transmission: "Automatic", price: 60, car_description: 'White, Diesel, 2door, Bluetooth Enabled, SatNav Enabled', user: user2)
+# car_4.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
+# car_4.save!
 
 file = URI.open("https://www.thevehiclewrappingcentre.com/wp-content/uploads/4D97770C-D7F3-4687-86CA-F25EE526C606.jpg")
 car_5 = Car.new(name: 'Tesla Model 3', car_type: 'Saloon', transmission: "Automatic", price: 210, car_description: 'Green, Petrol, Bluetooth Enabled, SatNav Enabled', user: user)
